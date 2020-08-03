@@ -35,9 +35,9 @@
 </p>
 
 <p align="center">
-	<a href="#-projeto">How to use</a>
-&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 	 <a href="#💻-motivation">Motivation</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+	<a href="#ho-to-use">How to use</a>
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 	  <a href="#rocket-technologies">Technologies</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 	  <a href="#information_source-how-to-clone">How to clone</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 	  <a href="#🤔-how-to-contribute">How to contribute</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -66,6 +66,11 @@ yarn create react-app your-project-name --template solrachix-typescript
 
 `--template` parameter points to this template, note that `cra-template-` prefix is omitted.
 
+Due to CRA template limitations (we can change only `scripts` and `dependencies` inside generated `package.json`) all configuration is done by adding config files where possible. For not having the option of devDependencies you will need to install some more libraries by running this command:
+```bash
+yarn add @types/react-router-dom @types/styled-components
+```
+
 ### Available Scripts
 
 In the project directory, you can run:
@@ -81,8 +86,6 @@ In the project directory, you can run:
 - `yarn lint` - lints project files according to eslint rules, see below. Typical use case: continuous integration environments, Travis, CircleCI, etc.
 
 - `yarn fix` - same as `yarn lint`, but also fixes errors, when possible. Typical use case: local development environment, git hooks.
-
-Due to CRA template limitations (we can change only `scripts` and `dependencies` inside generated `package.json`) all configuration is done by adding config files where possible.
 
 ## :rocket: Technologies
 This project was developed with the following technologies:
@@ -119,7 +122,7 @@ To clone and run this application, you will need [Git] (https://git-scm.com) ins
 - Push your branch: `git push origin my-feature`.
 
 After merging your receipt request to done, you can delete a branch from yours.
-Depois que a sua solicitação de recebimento for feita o merging, você pode excluir a sua branch.
+After your merging request is made, you can delete your branch.
 
 ## :memo: License
 This template is under the MIT license. See the file [LICENSE](LICENSE) for more details.
@@ -127,4 +130,4 @@ This template is under the MIT license. See the file [LICENSE](LICENSE) for more
 
 ---
 
-Feito com :heart: Carlos Miguel :wave:
+Done with :heart: Carlos Miguel :wave:
