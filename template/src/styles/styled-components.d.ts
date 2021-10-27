@@ -1,7 +1,9 @@
 import * as styledComponents from 'styled-components'
 import { ThemedStyledComponentsModule } from 'styled-components'
 
-import { ThemeTypes } from './themes/Types'
+import { LightTheme } from './themes'
+
+const ThemeTypes = typeof LightTheme
 
 const {
   default: styled,

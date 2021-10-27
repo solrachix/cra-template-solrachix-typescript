@@ -1,31 +1,73 @@
 import { createGlobalStyle } from 'styled-components'
-//  import { lighten } from 'polished';
+import { rgba } from 'polished'
 
 export default createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.2s linear;
   }
-  body {
-    background: #F0F0F5;
-    -webkit-font-smoothing: antialiased;
-    color: ${({ theme }) => theme.colors.themeColors.text};
+  html, body, #__next {
+    /* scroll-behavior: smooth; */
+    
+    max-height: 100vh;
+    /* overflow: hidden; */
+
+    background: ${props => props.theme.colors.themeColors.background.light};
+    color: ${props => props.theme.colors.themeColors.text.normal};
+
+    font-family: Roboto, sans-serif !important;
   }
-  body, input, button, select {
+
+  @media (max-width: 1080px){
+    html {
+      font-size: 93.75%;
+    }
+  }
+
+  @media (max-width: 720px){
+    html {
+      font-size: 87.5%;
+    }
+  }
+
+
+  body, input, textarea, button, select, a {
+    color: inherit;
     outline: none;
-    font-family: Roboto, Arial, Helvetica, sans-serif;
+
+    text-decoration: none;
+    font: 400 1rem  Roboto, sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
-    color: ${({ theme }) => theme.colors.themeColors.text};
-    font-family: Ubuntu;
+    font-weight: 400;
+    color: ${({ theme }) => theme.colors.themeColors.text.title};
   }
-  ::-webkit-scrollbar{
-    width: 8px;
-    background: ${({ theme }) => theme.colors.themeColors.secondary};
+  button {
+    cursor: pointer;
   }
-  ::-webkit-scrollbar-thumb{
-    background: ${({ theme }) => theme.colors.themeColors.primary};
+  
+  input[type=search] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 100%;
+  }
+  input::-webkit-search-decoration,
+  input::-webkit-search-cancel-button {
+    display: none; 
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #4d4d57;
     border-radius: 50px;
   }
 `
