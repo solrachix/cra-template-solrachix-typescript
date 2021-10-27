@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
-
 import { ThemeProvider } from './styles/styled-components.d'
 import GlobalStyle from './styles/GlobalStyle'
 
-import Routes from './routes/app'
+import Routes from './routes/auth'
 
 import { LightTheme } from './styles/themes'
 import { Container } from './styles/App'
 
-function App() {
+const App: React.FC = () => {
   const [theme, setTheme] = useState(LightTheme)
 
   return (

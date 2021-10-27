@@ -1,13 +1,9 @@
 import React from 'react'
 
-import { Container } from './styles';
+// import { Container } from './styles';
 
-function Home () {
-  return (
-    <Container>
-      <h1>Home page</h1>
-    </Container>
-  )
+const Home: React.FC = () => {
+  return <div />
 }
 
 export default Home

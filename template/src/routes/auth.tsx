@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-function AuthRoutes() {
+const Routes: React.FC = () => {
   return (
     <BrowserRouter>
       <Switch>
